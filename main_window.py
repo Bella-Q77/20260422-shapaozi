@@ -95,7 +95,7 @@ class MainWindow(QMainWindow):
         group_box.setStyleSheet("""
             QGroupBox {
                 font-weight: bold;
-                font-size: 14px;
+                font-size: 16px;
                 border: 2px solid #3498db;
                 border-radius: 8px;
                 margin-top: 10px;
@@ -199,7 +199,7 @@ class MainWindow(QMainWindow):
         group_box.setStyleSheet("""
             QGroupBox {
                 font-weight: bold;
-                font-size: 12px;
+                font-size: 16px;
                 border: 2px solid #27ae60;
                 border-radius: 8px;
                 margin-top: 10px;
@@ -240,9 +240,9 @@ class MainWindow(QMainWindow):
         self.questions_tree.itemClicked.connect(self.on_tree_item_clicked)
         
         self.questions_tree.setHeaderLabels(["问题", "状态", "层级"])
-        self.questions_tree.setColumnWidth(0, 250)
+        self.questions_tree.setColumnWidth(0, 380)
         self.questions_tree.setColumnWidth(1, 60)
-        self.questions_tree.setColumnWidth(2, 60)
+        self.questions_tree.setColumnWidth(2, 45)
         
         layout.addWidget(self.questions_tree)
         
