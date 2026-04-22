@@ -7,7 +7,7 @@ from PyQt5.QtWidgets import (
     QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
     QLabel, QTextEdit, QPushButton, QTreeWidget, QTreeWidgetItem,
     QMessageBox, QFileDialog, QSplitter, QGroupBox, QComboBox,
-    QSizePolicy, QFrame
+    QSizePolicy, QFrame, QHeaderView
 )
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QFont, QColor
@@ -241,9 +241,9 @@ class MainWindow(QMainWindow):
         
         self.questions_tree.setHeaderLabels(["问题", "状态", "层级"])
         header = self.questions_tree.header()
-        header.setSectionResizeMode(0, header.Stretch)
-        header.setSectionResizeMode(1, header.Stretch)
-        header.setSectionResizeMode(2, header.Stretch)
+        header.setSectionResizeMode(0, QHeaderView.Stretch)
+        header.setSectionResizeMode(1, QHeaderView.Stretch)
+        header.setSectionResizeMode(2, QHeaderView.Stretch)
         header.setStretchLastSection(False)
         header.setStretchFactor(0, 3)
         header.setStretchFactor(1, 2)
